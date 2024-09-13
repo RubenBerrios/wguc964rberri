@@ -16,11 +16,13 @@ model = load_model('plant_classify_model.keras')
 
 
 #create tabs for main page and visualization
-tab1, tab2, tab3 = st.tabs(["Prediction", "Visualization", "Help/Instructions"])
+tab1, tab2 = st.tabs(["Prediction", "Visualization"])
 
 #tab for uploading images to predict
 with tab1:
-    st.title('Plant Classification CNN model')
+    st.title('Plant Classification model')
+    st.text('Plants known to be invasive to the country of Asgard: daisy, dandelion')
+    st.text('Plants known to not be invasive: roses, sunflowers, tulips')
     #model prediction method
     def classify_images(image_path):
         input_image = tf.keras.utils.load_img(
@@ -63,16 +65,3 @@ with tab2:
     st.image('Visualization1.jpeg', width=500)
     st.image('Visualization2.jpeg', width=500)
     st.image('Visualization3.jpeg', width=500)
-
-
-    
-
-
-
-
-#tab for Instructions
-with tab3:
-    st.title("Licenses")
-    
-
-
