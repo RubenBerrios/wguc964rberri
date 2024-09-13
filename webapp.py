@@ -51,8 +51,6 @@ with tab1:
     #upload file
     uploaded_file = st.file_uploader('Choose a file to upload', type=["jpeg"])
     if uploaded_file is not None:
-        with open(os.path.join('Sample',uploaded_file.name), 'wb') as f:
-            f.write(uploaded_file.getbuffer())
         
         #display the image on web app
         st.image(uploaded_file, width=240)
