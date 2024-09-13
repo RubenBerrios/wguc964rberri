@@ -1,5 +1,8 @@
-keras
-os
-streamlit
-tensorflow
+pandas
 numpy
+OpenCV
+Pillow
+keras
+streamlit
+scikit-learn
+tensorflow
